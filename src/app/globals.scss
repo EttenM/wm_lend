@@ -77,9 +77,9 @@ a {
 
   &:hover {
     background: #cff501;
-    & .dropdown_menu {
-      display: flex;
-    }
+    // & .dropdown_menu {
+    //   display: flex;
+    // }
   }
 }
 .arrow {
@@ -102,6 +102,16 @@ a {
   }
 }
 
+@media (hover: hover) {
+  .menu_nav {
+    &:hover {
+      background: #cff501;
+      & .dropdown_menu {
+        display: flex;
+      }
+    }
+  }
+}
 @media (max-width: 1000px) {
   .dropdown_menu {
     position: relative;

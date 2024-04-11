@@ -55,8 +55,8 @@ export function Hero() {
 
   return (
     <section className="relative w-full max-w-[1660px] m:min-h-[950px] mx-auto flex justify-between m:items-center px-6 pb-8 flex-col m:flex-row mt-[100px]">
-      <div className="flex flex-col flex-1 m:max-w-[460px] l:max-w-[540px] xl:max-w-[648px] m:min-w-[460px] l:min-w-[540px] xl:min-w-[648px] mt-[50px] m:mt-0 z-[3]">
-        <h1 className="text-[38px] m:text-[52px] l:text-[64px] xl:text-[75px] font-semibold leading-[130%] mb-6 sm:mb-9 m:mb-5 xl:mb-11">
+      <div className="flex flex-col flex-1 max-w-[80%] xs:max-w-[65%] m:max-w-[460px] l:max-w-[540px] xl:max-w-[648px] m:min-w-[460px] l:min-w-[540px] xl:min-w-[648px] mt-[50px] m:mt-0 z-[3]">
+        <h1 className="text-[38px] s:text-[46px] m:text-[52px] l:text-[64px] xl:text-[75px] font-semibold leading-[130%] mb-6 sm:mb-9 m:mb-5 xl:mb-11">
           Touch the blockchain world in few clicks
         </h1>
         <div className="mb-8 sm:mb-12 m:mb-5 xl:mb-16 flex items-center gap-2">
@@ -91,7 +91,7 @@ export function Hero() {
       <Image
         src={GearsMSvg}
         alt="gears-hero-image-m"
-        className="w-[40%] gears absolute m:hidden right-4 top-[-90px] z-[2]"
+        className="w-[30%] gears absolute m:hidden right-4 top-[-20px] z-[2]"
       />
     </section>
   );

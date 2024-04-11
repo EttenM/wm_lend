@@ -9,7 +9,7 @@ import Step from "./Step";
 
 export function Steps() {
   return (
-    <section className="relative w-full  bg-[#fff] rounded-t-[50px] py-[70px] overflow-hidden border-[2px] border-[#000]   ">
+    <section className="relative w-full  bg-[#fff] rounded-t-[50px] py-[70px] overflow-hidden border-[2px] border-[#000] mt-[-70px]">
       <Image
         src={top_img}
         alt="head-image"

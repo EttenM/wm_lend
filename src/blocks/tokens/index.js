@@ -62,23 +62,23 @@ export function Tokens() {
       );
     });
 
-    gsap.fromTo(
-      ".tokens",
-      {},
-      {
-        scrollTrigger: {
-          trigger: ".tokens",
-          start: "bottom bottom",
-          end: "bottom top",
-          scrub: true,
-          pin: true,
-          pinSpacing: false,
-        },
-      }
-    );
+    // gsap.fromTo(
+    //   ".tokens",
+    //   {},
+    //   {
+    //     scrollTrigger: {
+    //       trigger: ".tokens",
+    //       start: "bottom bottom",
+    //       end: "bottom top",
+    //       scrub: true,
+    //       pin: true,
+    //       pinSpacing: false,
+    //     },
+    //   }
+    // );
   });
   return (
-    <section className="tokens relative  bg-[#CFF501] pb-[70px] rounded-t-[50px] border-[2px] border-[#000] border-b-0">
+    <section className="tokens relative  bg-[#CFF501] pb-[140px] rounded-t-[50px] border-[2px] border-[#000] border-b-0">
       <div className="w-full z-[6] relative -top-[16px]">
         <HeadIcon className="mx-auto max-w-[200px] m:max-w-full" />
       </div>

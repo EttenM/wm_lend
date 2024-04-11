@@ -11,6 +11,7 @@ import arrow from "./icons/Arrow.svg";
 import gsap from "gsap/gsap-core";
 import CloseIcon from "./icons/close";
 import { useGSAP } from "@gsap/react";
+import { SoonIcon } from "../footer/icons/soon-icon";
 
 gsap.registerPlugin(useGSAP);
 
@@ -19,7 +20,7 @@ export function Header() {
     {
       id: 1,
       title: "Get Started",
-      links: [{ link: "App", href: "/" }],
+      links: [{ link: "App", href: "/", soon: true }],
     },
     {
       id: 2,
@@ -34,7 +35,7 @@ export function Header() {
     },
     {
       id: 3,
-      title: "Reourses",
+      title: "Resourses",
       links: [
         { link: "Docs", target: "_blank", href: "/" },
         { link: "Privacy Policy", href: "/" },
@@ -47,10 +48,12 @@ export function Header() {
   const [toggleState, setToggleState] = useState(-1);
 
   const toggleTab = (index) => {
-    if (index === toggleState) {
-      setToggleState(0);
-    } else {
-      setToggleState(index);
+    if (window.innerWidth <= 1000) {
+      if (index === toggleState) {
+        setToggleState(0);
+      } else {
+        setToggleState(index);
+      }
     }
   };
 
@@ -91,15 +94,34 @@ export function Header() {
           } m:flex`}
         >
           {menu.map((item, index) => (
-            <li className="menu_nav w-full m:w-[180px]" key={item.id}>
+            <li
+              className={`menu_nav w-full m:w-[180px] ${
+                toggleState === item.id ? "!bg-[#cff501]" : ""
+              }`}
+              key={item.id}
+              onClick={() => {
+                toggleTab(item.id);
+              }}
+            >
               <div className="menu_nav__title text-[32px] m:text-[16px] font-semibold flex justify-between items-center">
                 <span>{item.title}</span>
-                <Image src={arrow} alt="arrow" className="arrow" />
+                <Image
+                  src={arrow}
+                  alt="arrow"
+                  className={`arrow ${
+                    toggleState === item.id ? "rotate-[90deg]" : ""
+                  } duration-150`}
+                />
               </div>
-              <ul className="dropdown_menu w-full m:w-[180px]">
+              <ul
+                className={`dropdown_menu w-full m:w-[180px] ${
+                  toggleState === item.id ? "!flex" : ""
+                }`}
+              >
                 {item.links.map((link_item, index) => (
                   <li className="menu_link" key={index}>
                     <Link
+                      className="flex items-center gap-[5px]"
                       href={link_item.href}
                       target={link_item.target}
                       onClick={() => {
@@ -107,6 +129,7 @@ export function Header() {
                       }}
                     >
                       {link_item.link}
+                      {link_item.soon ? <SoonIcon /> : ""}
                     </Link>
                   </li>
                 ))}
