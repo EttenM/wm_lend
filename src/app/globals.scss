@@ -74,13 +74,6 @@ a {
 .menu_nav {
   position: relative;
   border-radius: 13px 13px 0 0;
-
-  &:hover {
-    background: #cff501;
-    // & .dropdown_menu {
-    //   display: flex;
-    // }
-  }
 }
 .arrow {
   transition: transform 0.25s linear;
@@ -97,6 +90,12 @@ a {
   padding: 0 0 0 30px;
   transition: color 0.15s ease-out;
 
+  &:hover {
+    color: #bcdd00;
+  }
+}
+.footer_link {
+  transition: color 0.15s ease-out;
   &:hover {
     color: #bcdd00;
   }

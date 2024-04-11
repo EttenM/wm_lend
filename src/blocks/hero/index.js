@@ -38,18 +38,18 @@ export function Hero() {
       tl.to(text.current, { duration: 1, text: word });
       textTl.add(tl);
 
-      // hero_image.current.addEventListener("mousemove", (e) => {
-      //   let moveX = (e.clientX / window.innerWidth) * 50;
-      //   let moveY = (e.clientY / window.innerHeight) * 25;
+      hero_image.current.addEventListener("mousemove", (e) => {
+        let moveX = (e.clientX / window.innerWidth) * 50;
+        let moveY = (e.clientY / window.innerHeight) * 25;
 
-      //   gsap.to(".hero_image", {
-      //     x: -moveX,
-      //     y: -moveY,
+        gsap.to(".hero_image", {
+          x: -moveX,
+          y: -moveY,
 
-      //     ease: "power1",
-      //     duration: 0.5,
-      //   });
-      // });
+          ease: "power1",
+          duration: 0.5,
+        });
+      });
     });
   });
 

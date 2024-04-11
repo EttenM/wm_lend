@@ -16,24 +16,40 @@ export function Footer() {
       <div className="grid grid-cols-2 xs:grid-cols-3 sm:max-w-[594px] w-full sm:justify-items-end sm:ml-auto gap-y-10">
         <div className="flex flex-col items-start gap-3 col-span-2 xs:col-span-1">
           <ColumnTitle title="Get started" />
-          <button className="flex items-center justify-center gap-2 ">
+          <button className="footer_link flex items-center justify-center gap-2 ">
             App
             <SoonIcon />
           </button>
         </div>
         <div className="flex flex-col items-start gap-3">
           <ColumnTitle title="Community" />
-          <Link href="/">Telegram</Link>
-          <Link href="/">Twitter</Link>
-          <Link href="/">Medium</Link>
-          <Link href="/">Discord</Link>
+          <Link href="/" className="footer_link">
+            Telegram
+          </Link>
+          <Link href="/" className="footer_link">
+            Twitter
+          </Link>
+          <Link href="/" className="footer_link">
+            Medium
+          </Link>
+          <Link href="/" className="footer_link">
+            Discord
+          </Link>
         </div>
         <div className="flex flex-col items-start gap-3">
           <ColumnTitle title="Resourses" />
-          <Link href="/">Docs</Link>
-          <Link href="/">Privacy policy</Link>
-          <Link href="/">Terms of use</Link>
-          <Link href="/">Disclaimer</Link>
+          <Link href="/" className="footer_link">
+            Docs
+          </Link>
+          <Link href="/" className="footer_link">
+            Privacy policy
+          </Link>
+          <Link href="/" className="footer_link">
+            Terms of use
+          </Link>
+          <Link href="/" className="footer_link">
+            Disclaimer
+          </Link>
         </div>
       </div>
     </footer>
