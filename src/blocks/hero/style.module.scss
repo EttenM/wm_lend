@@ -1,0 +1,19 @@
+.clipInner {
+  clip-path: polygon(
+    calc(15px) 0,
+    calc(100%) 0,
+    calc(100%) calc(100% - 15px),
+    calc(100% - 15px) calc(100%),
+    0 calc(100%),
+    0 calc(15px)
+  );
+  background: black;
+}
+.blinkCursor {
+  animation: cursor 1s infinite step-end;
+}
+@keyframes cursor {
+  50% {
+    background: transparent;
+  }
+}

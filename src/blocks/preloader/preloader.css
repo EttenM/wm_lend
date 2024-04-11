@@ -1,0 +1,16 @@
+.preloader {
+  position: fixed;
+  display: grid;
+  /* align-items: center;  */
+  justify-content: center;
+  z-index: 999;
+}
+
+/* .loading__text {
+  color: transparent; 
+  position: relative; 
+  pointer-events: none;
+  user-select: none;    
+  padding-top: 50vh;
+
+} */
