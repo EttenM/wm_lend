@@ -25,7 +25,6 @@
 }
 
 body {
-  max-width: 100vw;
   overflow: hidden;
   scroll-behavior: smooth;
 }
@@ -79,9 +78,7 @@ a {
   transition: transform 0.25s linear;
   display: none;
 }
-.menu_nav:hover > .menu_nav__title .arrow {
-  transform: rotate(90deg);
-}
+
 .menu_nav__title {
   padding: 12px 50px 12px 30px;
 }
@@ -102,6 +99,16 @@ a {
 }
 
 @media (hover: hover) {
+  .menu_nav {
+    &:hover {
+      background: #cff501;
+      & .dropdown_menu {
+        display: flex;
+      }
+    }
+  }
+}
+@media (min-width: 1000px) {
   .menu_nav {
     &:hover {
       background: #cff501;

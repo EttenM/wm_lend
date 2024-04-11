@@ -9,16 +9,16 @@ import Step from "./Step";
 
 export function Steps() {
   return (
-    <section className="relative w-full  bg-[#fff] rounded-t-[50px] py-[70px] overflow-hidden border-[2px] border-[#000] mt-[-70px]">
+    <section className="relative w-full mx-auto  bg-[#fff] rounded-t-[50px] py-[70px] overflow-hidden border-[2px] border-[#000] mt-[-70px]">
       <Image
         src={top_img}
         alt="head-image"
-        className="mx-auto absolute top-0 left-0"
+        className="w-full h-auto object-contain mx-auto absolute top-0 left-0 right-0"
       />
       <Image
         src={bottom_img}
         alt="head-image"
-        className="mx-auto absolute bottom-0 left-0"
+        className="w-full h-auto object-contain mx-auto absolute bottom-0 left-0"
       />
       <div className="max-w-[1535px] mx-auto relative px-6 z-[2]">
         <h2

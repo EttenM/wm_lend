@@ -14,7 +14,8 @@ const Preloader = () => {
       .set("body", { overflow: "hidden" })
       .to(".mech", { left: "50%", x: "-50%", duration: 1 })
       .to(".logo", { y: "25vh", ease: "bounce.out", duration: 1 })
-      .to(".loading__text", { opacity: 1, duration: 1 })
+      .to(".logo", { rotate: "360deg", ease: "power3.inOut", duration: 2 })
+
       .to(".preloader", {
         yPercent: -100,
         duration: 0.75,
@@ -143,7 +144,7 @@ const Preloader = () => {
           </svg>
           <div
             className="logo h-auto will-change-transform top-[140px] left-[51%] translate-x-[-51%] absolute 
-          flex flex-col items-center"
+         "
           >
             <svg
               className="w-[80px] sm:w-[115px] h-auto"
@@ -223,9 +224,6 @@ const Preloader = () => {
                 </clipPath>
               </defs>
             </svg>
-            <h1 className="loading__text opacity-0 text-[calc((1vh+1vw)*4)] font-semibold">
-              WrapMe
-            </h1>
           </div>
         </div>
       </div>

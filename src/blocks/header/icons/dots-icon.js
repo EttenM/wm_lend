@@ -1,6 +1,7 @@
-export function DotsIcon() {
+export function DotsIcon({ className }) {
   return (
     <svg
+      className={className}
       width="38"
       height="10"
       viewBox="0 0 38 10"

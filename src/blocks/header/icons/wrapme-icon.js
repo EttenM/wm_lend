@@ -1,6 +1,7 @@
 export function WrapMeIcon({ className }) {
   return (
     <svg
+      className={className}
       width="58"
       height="55"
       viewBox="0 0 58 55"

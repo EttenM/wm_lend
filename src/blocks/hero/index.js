@@ -54,9 +54,9 @@ export function Hero() {
   });
 
   return (
-    <section className="relative w-full max-w-[1660px] m:min-h-[950px] mx-auto flex justify-between m:items-center px-6 pb-8 flex-col m:flex-row mt-[100px]">
-      <div className="flex flex-col flex-1 max-w-[80%] xs:max-w-[65%] m:max-w-[460px] l:max-w-[540px] xl:max-w-[648px] m:min-w-[460px] l:min-w-[540px] xl:min-w-[648px] mt-[50px] m:mt-0 z-[3]">
-        <h1 className="text-[38px] s:text-[46px] m:text-[52px] l:text-[64px] xl:text-[75px] font-semibold leading-[130%] mb-6 sm:mb-9 m:mb-5 xl:mb-11">
+    <section className="relative w-full m:min-h-screen mx-auto flex justify-center m:items-center px-6 pb-8 flex-col m:flex-row mt-[60px] xs:mt-[100px]">
+      <div className="flex flex-col  max-w-[90%] xs:max-w-[65%] m:max-w-[460px] l:max-w-[540px] xl:max-w-[40%] m:min-w-[460px] l:min-w-[540px] xl:min-w-[648px] mt-[50px] m:mt-0 z-[3]">
+        <h1 className="text-[34px] s:text-[46px] m:text-[52px] l:text-[64px] xl:text-[calc((1vh+1vw)*3)] font-semibold leading-[130%] mb-6 sm:mb-9 m:mb-5 xl:mb-11">
           Touch the blockchain world in few clicks
         </h1>
         <div className="mb-8 sm:mb-12 m:mb-5 xl:mb-16 flex items-center gap-2">
@@ -75,11 +75,11 @@ export function Hero() {
           Explore
         </button>
       </div>
-      <div className="flex-1">
+      <div className="xl:w-[50%]">
         <Image
           src={HeroSvg}
           alt="hero-image"
-          className="hero_image will-change-transform"
+          className="hero_image w-full h-auto object-contain will-change-transform"
           ref={hero_image}
         />
       </div>

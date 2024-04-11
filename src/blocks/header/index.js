@@ -82,8 +82,8 @@ export function Header() {
       `}
     >
       <Link href="/" className="flex items-center gap-2 s:gap-4 z-[1]">
-        <WrapMeIcon className="max-w-[45px] s:max-w-full" />
-        <h2 className="font-lexend text-[32px] m:text-[28px] font-semibold tracking-[-.08em]">
+        <WrapMeIcon className="max-w-[40px] s:max-w-full" />
+        <h2 className="font-lexend text-[20px] xs:text-[32px] m:text-[28px] font-semibold tracking-[-.08em]">
           WrapMe
         </h2>
       </Link>
@@ -103,13 +103,13 @@ export function Header() {
                 toggleTab(item.id);
               }}
             >
-              <div className="menu_nav__title text-[32px] m:text-[16px] font-semibold flex justify-between items-center">
+              <div className="menu_nav__title text-[24px] m:text-[16px] font-semibold flex justify-between items-center">
                 <span>{item.title}</span>
                 <Image
                   src={arrow}
                   alt="arrow"
                   className={`arrow ${
-                    toggleState === item.id ? "rotate-[90deg]" : ""
+                    toggleState === item.id ? "rotate-[90deg]" : "rotate-[0deg]"
                   } duration-150`}
                 />
               </div>
@@ -157,7 +157,11 @@ export function Header() {
           toggleBurger();
         }}
       >
-        {isActiveMenu ? <CloseIcon /> : <DotsIcon />}
+        {isActiveMenu ? (
+          <CloseIcon className={"w-[24px] xs:w-auto"} />
+        ) : (
+          <DotsIcon className={"w-[24px] xs:w-auto"} />
+        )}
       </button>
     </header>
   );
