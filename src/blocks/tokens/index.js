@@ -9,7 +9,7 @@ import FanTokenOne from "./icons/fan-token-1.svg";
 import FanTokenTwo from "./icons/fan-token-2.svg";
 import { HeadIcon } from "./icons/head-icon";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCreative, Pagination } from "swiper/modules";
+import { Autoplay, EffectCreative, Pagination } from "swiper/modules";
 import "swiper/css";
 import gsap from "gsap";
 
@@ -158,6 +158,11 @@ export function Tokens() {
               className={styles.clipInnerOne}
               grabCursor={true}
               effect={"creative"}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: true,
+              }}
+              loop={true}
               creativeEffect={{
                 prev: {
                   shadow: true,
@@ -180,7 +185,7 @@ export function Tokens() {
 `;
                 },
               }}
-              modules={[Pagination, EffectCreative]}
+              modules={[Autoplay, Pagination, EffectCreative]}
             >
               <SwiperSlide>
                 <div className="flex flex-col justify-end items-center h-full bg-[#fff]">

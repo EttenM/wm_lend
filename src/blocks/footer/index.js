@@ -2,14 +2,19 @@ import Link from "next/link";
 import { SoonIcon } from "./icons/soon-icon";
 import { SocialIconLinks } from "./social-icon-links";
 import { WhitelistForm } from "./whitelist-form";
+import { WrapMeIcon } from "../header/icons/wrapme-icon";
 
 export function Footer() {
   return (
-    <footer className="grid grid-cols-1 sm:grid-cols-2  pt-24 pb-14 max-w-[1660px] mx-auto px-6 gap-10">
+    <footer className="grid grid-cols-1 sm:grid-cols-2 pt-[40px] xs:pt-24 pb-14 max-w-[1660px] mx-auto px-6 gap-10">
       <div className="flex flex-col gap-8">
-        <h2 className="font-lexend text-[28px] font-semibold tracking-[-.08em]">
-          WrapMe
-        </h2>
+        <div className="flex items-center gap-2 s:gap-4">
+          <WrapMeIcon className="max-w-[40px] s:max-w-full" />
+          <h2 className="font-lexend text-[32px] m:text-[28px] font-semibold tracking-[-.08em]">
+            WrapMe
+          </h2>
+        </div>
+
         <SocialIconLinks />
         <WhitelistForm />
       </div>

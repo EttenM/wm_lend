@@ -36,18 +36,7 @@ a {
 
 .accent {
   position: relative;
-
-  &:after {
-    position: absolute;
-    content: "";
-    z-index: -1;
-    background: #cff501;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -60%);
-    width: 105%;
-    height: 50%;
-  }
+  background: #cff501;
 }
 
 .swiper-slide-shadow {
