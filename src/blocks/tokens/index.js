@@ -129,7 +129,7 @@ export function Tokens() {
               <h3 className="text-[16px] m:text-[24px] xl:text-[28px] s:max-w-[688px] mb-[10%] px-5 z-[0] m:leading-[34px]">
                 Tokenize your digital assets rights, and services with the
                 Digital{" "}
-                <span className="accent font-semibold">Product Token.</span>{" "}
+                <span className="accent font-semibold">Product Token</span>.{" "}
                 Post ads, engage in social activities, provide services, make
                 deals, and more.
               </h3>
@@ -146,7 +146,7 @@ export function Tokens() {
               <h3 className="text-[16px] m:text-[24px] xl:text-[28px] s:max-w-[688px] mb-[10%] px-5 z-[0] m:leading-[34px]">
                 <span className="accent font-semibold">Custom</span> setups
                 allows you to turn anything into a{" "}
-                <span className="accent font-semibold">token!</span> Wrap any
+                <span className="accent font-semibold">token</span>! Wrap any
                 digital or physical item, assign a unique utility, trade, and
                 have fun!
               </h3>
@@ -212,8 +212,8 @@ export function Tokens() {
                   <h3 className="text-[16px] m:text-[24px] xl:text-[28px] s:max-w-[688px] mb-[10%] px-5 z-[0] m:leading-[34px]">
                     Are you a fan? Get a unique opportunity to connect with your
                     favorite artist directly, hold{" "}
-                    <span className="accent font-semibold">Fan tokens</span>,
-                    and become part of an exclusive community.
+                    <span className="accent font-semibold">Fan token</span>, and
+                    become part of an exclusive community.
                   </h3>
                 </div>
               </SwiperSlide>

@@ -8,6 +8,7 @@ import gsap from "gsap";
 
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Social from "@/blocks/social";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -38,6 +39,7 @@ export default function Home() {
 
       <Tokens />
       <Steps />
+      <Social />
     </main>
   );
 }

@@ -45,7 +45,7 @@ export function Tokenize() {
   });
 
   return (
-    <section className="blender w-full mx-auto relative -top-[2px] pb-[100px] l:pb-[200px]">
+    <section className="blender w-full mx-auto relative -top-[2px] pb-[160px] sm:pb-[100px] l:pb-[200px]">
       <div className="flex text-[28px] m:text-[70px] font-pixy border-y border-black bg-white text-center z-[2] whitespace-nowrap overflow-hidden">
         {Array(8)
           .fill("TOKENIZE-TO-EARN")

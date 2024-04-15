@@ -6,7 +6,7 @@ import { WrapMeIcon } from "../header/icons/wrapme-icon";
 
 export function Footer() {
   return (
-    <footer className="grid grid-cols-1 sm:grid-cols-2 pt-[40px] xs:pt-24 pb-14 max-w-[1660px] mx-auto px-6 gap-10">
+    <footer className="grid grid-cols-1 sm:grid-cols-2 py-[40px] xs:py-[80px]  max-w-[1660px] mx-auto px-6 gap-10 border-t-[2px] border-t-[#000]">
       <div className="flex flex-col gap-8">
         <div className="flex items-center gap-2 s:gap-4">
           <WrapMeIcon className="max-w-[40px] s:max-w-full" />

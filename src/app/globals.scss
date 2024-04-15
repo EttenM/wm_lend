@@ -97,7 +97,7 @@ a {
     }
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 999px) {
   .menu_nav {
     &:hover {
       background: #cff501;
@@ -107,7 +107,7 @@ a {
     }
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 999px) {
   .dropdown_menu {
     position: relative;
   }

@@ -60,7 +60,7 @@ export function Hero() {
           Touch the blockchain world in few clicks
         </h1>
         <div className="mb-8 sm:mb-12 m:mb-5 xl:mb-16 flex items-center gap-2">
-          <h2 className="text-[24px] l:text-[28px] xl:text-[39px]">
+          <h2 className="text-[24px] l:text-[28px] xl:text-[calc((1vh+1vw)*1.5)]">
             Tokenize your{" "}
             <span ref={text} className="accent font-semibold "></span>
           </h2>
@@ -86,7 +86,7 @@ export function Hero() {
       <Image
         src={GearsSvg}
         alt="gears-hero-image"
-        className="gears absolute top-[-40px] l:top-[-120px] left-[7%] hidden m:block"
+        className="w-[20%] gears absolute top-[-40px] xl:top-[-120px] left-[10%] translate-x-[-10%] hidden m:block"
       />
       <Image
         src={GearsMSvg}

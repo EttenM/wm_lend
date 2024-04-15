@@ -1,51 +1,69 @@
 import styles from "./styles.module.css";
 import { HeadIcon } from "./icons/head-icon";
 import { useEffect, useRef, useState } from "react";
-import { useGSAP } from "@gsap/react";
+import nail from "./icons/nail.svg";
+import Image from "next/image";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 export function BoardInfo() {
-  const [height, setHeight] = useState(0);
-  const [name, setName] = useState("");
-  const inner = useRef(null);
-  const parent = useRef(null);
-
-  useEffect(() => {
-    const color = getComputedStyle(inner.current).getPropertyValue("height");
-    parent.current.style.setProperty("height", color);
-    document.addEventListener("resize", () => {
-      const color = getComputedStyle(inner.current).getPropertyValue("height");
-      parent.current.style.setProperty("height", color);
-    });
-    return () => window.removeEventListener("resize", () => {});
+  const board = useRef();
+  useGSAP(() => {
+    gsap.fromTo(
+      board.current,
+      { yPercent: -200 },
+      {
+        yPercent: 0,
+        duration: 2,
+        ease: "bounce.out",
+        scrollTrigger: {
+          trigger: ".conveyor",
+          start: "+=20% center",
+        },
+      }
+    );
   });
-  // useGSAP(() => {
-  //   // gsap.set(parent.current, { height: height });
-  //   const color = getComputedStyle(inner.current).getPropertyValue("height");
-  //   parent.current.style.setProperty("height", color);
-  // }, [height]);
-
   return (
-    <div className="relative max-w-[60%] xs:max-w-[50%] sm:max-w-[46%] xl:max-w-[calc((1vh+1vw)*31)] ml-auto  mt-[154px] sm:mt-[254px] xl:mb-[calc((1vh+1vw)*25)] z-[1] mr-[30px] xl:mr-[calc((1vh+1vw)*5)]">
-      <div className="w-full z-[6] relative top-[9px] m:top-[10px]">
-        <HeadIcon className="mx-auto max-w-[100px] m:max-w-full" />
-      </div>
-      <div
-        className={`relative w-full xs:min-h-[200px] s:min-h-[220px] m:min-h-[283px]`}
-        ref={parent}
-      >
-        <div
-          className={`${styles.clipInner} flex items-center justify-center`}
-          ref={inner}
+    <div
+      className="relative max-w-[70%] xs:max-w-[50%] sm:max-w-[46%] xl:max-w-[calc((1vh+1vw)*31)] ml-auto xl:mb-[calc((1vh+1vw)*25)] z-[1] mr-[20px] xl:mr-[calc((1vh+1vw)*5)] 
+    flex flex-col will-change-transform mt-[-5px]"
+      ref={board}
+    >
+      <div className=" border-x-[7px] border-[#000] w-[88%] s:w-[92%]  h-[185px] sm:h-[254px] mx-auto"></div>
+      <div className="relative bg-[#CFF501] border-[2px] border-[#000] rounded-[25px] pl-[30px] pr-[15px] m:px-[50px] py-[25px] m:py-[45px] mt-[-3px]">
+        <h2
+          className="text-[calc((1vh+1vw)*1)] xxs:text-[16px] m:text-[20px] l:text-[24px] xl:text-[calc((1vh+1vw)*1)]  leading-[17px] 
+        s:leading-[20px] m:leading-[28px] l:leading-[34px] xl:leading-[calc((1vh+1vw)*1.1)]"
         >
-          <h2 className="text-[calc((1vh+1vw)*1)] xxs:text-[16px] m:text-[20px] l:text-[24px] xl:text-[calc((1vh+1vw)*1)] px-4 m:px-12 py-6 s:py-14 xl:py-18 leading-[17px] s:leading-[20px] m:leading-[28px] l:leading-[34px] xl:leading-[calc((1vh+1vw)*1.1)]">
-            <span className="font-bold">WrapMe</span> is social orienteered
-            platform for tokenization and trading of social, physical, and
-            digital assets. Wrap everything you want, place it on the market and
-            share it with your friends. Your portal into web3 world.
-          </h2>
-        </div>
-        <div className={`${styles.clipBack}`} />
+          <span className="font-bold">WrapMe</span> is social orienteered
+          platform for tokenization and trading of social, physical, and digital
+          assets. Wrap everything you want, place it on the market and share it
+          with your friends. Your portal into web3 world.
+        </h2>
+        <Image
+          src={nail}
+          alt="nail"
+          className="absolute w-[4%] s:w-[2%] h-auto left-[15px] m:left-[30px]  top-[15px]"
+        />
+        <Image
+          src={nail}
+          alt="nail"
+          className="absolute w-[4%] s:w-[2%] h-auto right-[15px] m:right-[30px]  top-[15px]"
+        />{" "}
+        <Image
+          src={nail}
+          alt="nail"
+          className="absolute w-[4%] s:w-[2%] h-auto left-[15px] m:left-[30px]  bottom-[15px]"
+        />{" "}
+        <Image
+          src={nail}
+          alt="nail"
+          className="absolute w-[4%] s:w-[2%] h-auto right-[15px] m:right-[30px]  bottom-[15px]"
+        />
       </div>
     </div>
   );

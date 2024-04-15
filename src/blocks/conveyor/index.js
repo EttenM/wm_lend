@@ -9,6 +9,7 @@ import gsap from "gsap";
 
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,7 +33,7 @@ export function Conveyor() {
     <section className="conveyor relative w-full mx-auto min-h-[900px] m:min-h-[1080px] xl:min-h-screen overflow-hidden">
       <RailLine />
       <TopCraneIcon
-        className="top_crane absolute top-0 left-[-50px] s:left-[10%] m:left-[30%] z-[1] max-h-[443px] m:max-h-[500px] xl:max-h-none
+        className="top_crane absolute top-0 left-[-140px] s:left-[10%] m:left-[30%] z-[1] max-h-[320px] xs:max-h-[443px] m:max-h-[500px] xl:max-h-none
       xl:w-[calc((1vh+1vw)*17)] h-auto will-change-transform"
       />
       <BoardInfo />

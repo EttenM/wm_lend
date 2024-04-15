@@ -77,13 +77,13 @@ export function Header() {
       className={`header ${
         isActiveMenu
           ? `fixed m-auto left-0 right-0 top-0 w-[100%] h-[100vh] bg-[#fff] z-[100] overflow-auto py-5 px-6`
-          : "absolute top-0 left-0 right-0 flex items-center justify-between mx-auto max-w-[1671px] py-5 px-6 z-[3]"
+          : "absolute top-0 left-0 right-0 flex items-center justify-between mx-auto max-w-[100%] xl:max-w-[89%] py-5 px-6  z-[3]"
       }
       `}
     >
       <Link href="/" className="flex items-center gap-2 s:gap-4 z-[1]">
-        <WrapMeIcon className="max-w-[40px] s:max-w-full" />
-        <h2 className="font-lexend text-[20px] xs:text-[32px] m:text-[28px] font-semibold tracking-[-.08em]">
+        <WrapMeIcon className="max-w-[40px] s:w-full shrink-0" />
+        <h2 className="font-lexend text-[20px] xs:text-[32px] m:text-[28px] xl:text-[calc((1vh+1vw)*1)] font-semibold tracking-[-.08em]">
           WrapMe
         </h2>
       </Link>
@@ -95,7 +95,7 @@ export function Header() {
         >
           {menu.map((item, index) => (
             <li
-              className={`menu_nav w-full m:w-[180px] ${
+              className={`menu_nav w-full m:w-[180px] xl:w-[calc((1vh+1vw)*7)] ${
                 toggleState === item.id ? "!bg-[#cff501]" : ""
               }`}
               key={item.id}
@@ -103,7 +103,7 @@ export function Header() {
                 toggleTab(item.id);
               }}
             >
-              <div className="menu_nav__title text-[24px] m:text-[16px] font-semibold flex justify-between items-center">
+              <div className="menu_nav__title text-[24px] m:text-[16px] xl:text-[calc((1vh+1vw)*0.6)] font-semibold flex justify-between items-center">
                 <span>{item.title}</span>
                 <Image
                   src={arrow}
@@ -114,14 +114,14 @@ export function Header() {
                 />
               </div>
               <ul
-                className={`dropdown_menu w-full m:w-[180px] ${
+                className={`dropdown_menu w-full m:w-[180px] xl:w-[calc((1vh+1vw)*7)] ${
                   toggleState === item.id ? "!flex" : ""
                 }`}
               >
                 {item.links.map((link_item, index) => (
                   <li className="menu_link" key={index}>
                     <Link
-                      className="flex items-center gap-[5px]"
+                      className="flex items-center gap-[5px] xl:text-[calc((1vh+1vw)*0.6)]"
                       href={link_item.href}
                       target={link_item.target}
                       onClick={() => {
