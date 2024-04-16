@@ -39,10 +39,9 @@ export function BoardInfo() {
           className="text-[calc((1vh+1vw)*1)] xxs:text-[16px] m:text-[20px] l:text-[24px] xl:text-[calc((1vh+1vw)*1)]  leading-[17px] 
         s:leading-[20px] m:leading-[28px] l:leading-[34px] xl:leading-[calc((1vh+1vw)*1.1)]"
         >
-          <span className="font-bold">WrapMe</span> is social orienteered
-          platform for tokenization and trading of social, physical, and digital
-          assets. Wrap everything you want, place it on the market and share it
-          with your friends. Your portal into web3 world.
+          <span className="font-bold">WrapMe</span> is a socially oriented
+          platform for tokenization, interaction and trading of digital assets.
+          A gateway between Web2 and Web3 world, aimed at mass adoption.
         </h2>
         <Image
           src={nail}

@@ -23,7 +23,7 @@ const Social = () => {
       icon: social,
       subtitle: "For crypto degens",
       title: "Social",
-      text: "Blockchain is simpler than it seems, turn your ideas into reality.",
+      text: "Communicate, find like-minded people. Make deals, share your experience and knowledge.",
     },
     {
       id: 2,
@@ -31,7 +31,7 @@ const Social = () => {
       icon: blockchain,
       subtitle: "For social creators",
       title: "Blockchain",
-      text: "Blockchain is simpler than it seems, turn your ideas into reality.",
+      text: "Wrap everything in a blockchain, it's easier than it seems. Turn your ideas into digital reality.",
     },
   ];
   const pixy_cards = [
@@ -97,7 +97,7 @@ const Social = () => {
             <div
               className={`${
                 card.id % 2 === 0 ? "bg-[#CFF501]" : "bg-[#00CADE]"
-              } py-[5%] px-[5%] m:py-[60px] m:px-[80px] flex flex-col xl:flex-row items-center rounded-[25px] gap-[10px] xl:gap-[60px] `}
+              } py-[5%] px-[5%] m:py-[40px] m:px-[40px] flex flex-col xl:flex-row items-center rounded-[25px] gap-[10px] xl:gap-[60px] `}
               key={card.id}
             >
               <div className="w-full xl:w-[256px] h-[160px] s:h-[256px] bg-[#fff] rounded-[25px] flex justify-center items-center flex-shrink-0">
@@ -114,7 +114,7 @@ const Social = () => {
                 <h2 className="text-[28px] s:text-[40px] m:text-[60px] m:mb-[20px] font-semibold m:leading-none">
                   {card.title}
                 </h2>
-                <p className="text-[16px] s:text-[20px] m:text-[28px]">
+                <p className="text-[16px] sm:text-[20px] m:text-[24px]">
                   {card.text}
                 </p>
               </div>

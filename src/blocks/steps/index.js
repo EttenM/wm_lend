@@ -9,7 +9,7 @@ import Step from "./Step";
 
 export function Steps() {
   return (
-    <section className="relative w-full mx-auto  bg-[#fff] rounded-t-[50px] py-[70px] overflow-hidden border-[2px] border-[#000] mt-[-70px]">
+    <section className="relative w-full mx-auto  bg-[#fff] rounded-t-[50px] py-[30px] xs:py-[70px] overflow-hidden border-[2px] border-[#000] mt-[-70px]">
       <Image
         src={top_img}
         alt="head-image"
@@ -22,11 +22,10 @@ export function Steps() {
       />
       <div className="max-w-[1535px] mx-auto relative px-6 z-[2]">
         <h2
-          className="text-[20px] xs:text-[24px] m:text-[30px] m:leading-[50px] l:text-[40px] text-center font-semibold max-w-[90%] s:max-w-[70%] 
+          className="text-[20px] xs:text-[24px] sm:text-[30px] m:leading-[50px] l:text-[40px] text-center font-semibold max-w-[90%] s:max-w-[70%] 
         sm:max-w-[60%] l:max-w-[696px] mx-auto leading-[34px] l:leading-[61px] mt-[2vw]"
         >
-          <span className="accent">Blockchain</span> is simpler than it seems,
-          turn your <span className="accent">ideas</span> into reality.
+          Web3 WrapMe <span className="accent">modules</span>
         </h2>
 
         <Image
