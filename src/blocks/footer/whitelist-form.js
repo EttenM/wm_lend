@@ -1,26 +1,36 @@
 "use client";
 
+import { addToWhitelist } from "@/shared/add-to-whitelist";
 import { useState } from "react";
 
 export function WhitelistForm() {
-  const [mail, setMail] = useState("");
+  const [email, setEmail] = useState("");
+  const [notification, setNotification] = useState("");
 
   const mailHandler = (event) => {
-    setMail(event.target.value);
+    setEmail(event.target.value);
   };
 
   const handleSubmitForm = async (e) => {
     e.preventDefault();
-    if (!mail) return;
+    if (!email) return;
+    const res = await addToWhitelist(email);
+    console.log(res);
+    if (res.ok) {
+      setEmail("");
+      setNotification(res.message);
+    } else {
+      setNotification(res.message);
+    }
   };
 
   return (
-    <form onSubmit={handleSubmitForm} className="flex">
+    <form onSubmit={handleSubmitForm} className="flex relative">
       <input
         placeholder="Enter your email address"
         className="bg-[#F6F6F6] placeholder:text-[16px] placeholder:text-[#ABABAB] px-4 py-[17px] s:max-w-[355px] w-full outline-none focus:border-[1px] focus:border-[#00D9EE]"
         onChange={mailHandler}
-        value={mail}
+        value={email}
         type="email"
       />
       <button
@@ -29,6 +39,7 @@ export function WhitelistForm() {
       >
         Subscribe
       </button>
+      {notification && <p className="absolute -bottom-8">{notification}</p>}
     </form>
   );
 }
