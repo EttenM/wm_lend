@@ -31,6 +31,7 @@ const pixy = localFont({
 export const metadata = {
   title: "WrapMe",
   description: "WrapMe Description",
+  metadataBase: new URL("https://wrapme.io"),
 };
 
 export default function RootLayout({ children }) {
