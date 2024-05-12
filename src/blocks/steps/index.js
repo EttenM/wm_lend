@@ -25,7 +25,7 @@ export function Steps() {
           className="text-[20px] xs:text-[24px] sm:text-[30px] m:leading-[50px] l:text-[40px] text-center font-semibold max-w-[90%] s:max-w-[70%] 
         sm:max-w-[60%] l:max-w-[696px] mx-auto leading-[34px] l:leading-[61px] mt-[2vw]"
         >
-          Web3 WrapMe <span className="accent">modules</span>
+          <span className="accent">Web3</span> WrapMe module
         </h2>
 
         <Image

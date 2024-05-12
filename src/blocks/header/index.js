@@ -103,7 +103,7 @@ export function Header() {
                 toggleTab(item.id);
               }}
             >
-              <div className="menu_nav__title text-[24px] m:text-[16px] xl:text-[calc((1vh+1vw)*0.6)] font-semibold flex justify-between items-center">
+              <div className="menu_nav__title text-[24px] m:text-[16px] xl:text-[calc((1vh+1vw)*0.6)] font-semibold flex justify-between items-center cursor-default ">
                 <span>{item.title}</span>
                 <Image
                   src={arrow}

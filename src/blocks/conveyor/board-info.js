@@ -29,7 +29,7 @@ export function BoardInfo() {
   });
   return (
     <div
-      className="relative max-w-[70%] xs:max-w-[50%] sm:max-w-[46%] xl:max-w-[calc((1vh+1vw)*31)] ml-auto xl:mb-[calc((1vh+1vw)*25)] z-[1] mr-[20px] xl:mr-[calc((1vh+1vw)*5)] 
+      className="relative max-w-[70%] xs:max-w-[60%] sm:max-w-[46%] xl:max-w-[calc((1vh+1vw)*31)] ml-auto xl:mb-[calc((1vh+1vw)*25)] z-[1] mr-[20px] xl:mr-[calc((1vh+1vw)*5)] 
     flex flex-col will-change-transform mt-[-5px]"
       ref={board}
     >
@@ -41,7 +41,8 @@ export function BoardInfo() {
         >
           <span className="font-bold">WrapMe</span> is a socially oriented
           platform for tokenization, interaction and trading of digital assets.
-          A gateway between Web2 and Web3 world, aimed at mass adoption.
+          It serves as a bridge between the Web2 and Web3 worlds, aiming to
+          promote crypto mass adoption.
         </h2>
         <Image
           src={nail}

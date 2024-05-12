@@ -820,7 +820,7 @@ const Blender = ({ name }) => {
           stroke-width="2"
           stroke-miterlimit="10"
         />
-        <g ref={left_switch}>
+        <g ref={left_switch} className=" cursor-pointer">
           <path
             d="M1172.05 466.733L1126.3 522.671L1132.31 527.588L1178.06 471.651L1172.05 466.733Z"
             fill="white"
@@ -850,7 +850,7 @@ const Blender = ({ name }) => {
           />
         </g>
 
-        <g ref={right_switch}>
+        <g ref={right_switch} className=" cursor-pointer">
           <path
             d="M1209.2 451.374L1201.82 453.765L1224.06 522.533L1231.45 520.142L1209.2 451.374Z"
             fill="white"
@@ -887,7 +887,7 @@ const Blender = ({ name }) => {
           stroke-miterlimit="10"
         />
         <path
-          className="input_1"
+          className="input_1 cursor-pointer"
           onClick={() => {
             setColor(colors.black);
           }}
@@ -902,7 +902,7 @@ const Blender = ({ name }) => {
           stroke-miterlimit="10"
         />
         <path
-          className="input_4"
+          className="input_4 cursor-pointer"
           onClick={() => {
             setColor(colors.yellow);
           }}
@@ -917,7 +917,7 @@ const Blender = ({ name }) => {
           stroke-miterlimit="10"
         />
         <path
-          className="input_2"
+          className="input_2 cursor-pointer"
           onClick={() => {
             setColor(colors.blue);
           }}
@@ -932,7 +932,7 @@ const Blender = ({ name }) => {
           stroke-miterlimit="10"
         />
         <path
-          className="input_5"
+          className="input_5 cursor-pointer"
           onClick={() => {
             setColor(colors.white);
           }}
@@ -947,7 +947,7 @@ const Blender = ({ name }) => {
           stroke-miterlimit="10"
         />
         <path
-          className="input_3"
+          className="input_3 cursor-pointer"
           onClick={() => {
             setColor(colors.red);
           }}
@@ -962,7 +962,7 @@ const Blender = ({ name }) => {
           stroke-miterlimit="10"
         />
         <path
-          className="input_6"
+          className="input_6 cursor-pointer"
           onClick={() => {
             setColor(colors.green);
           }}
