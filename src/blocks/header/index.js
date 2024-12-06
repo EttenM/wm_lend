@@ -38,8 +38,8 @@ export function Header() {
       title: "Resourses",
       links: [
         { link: "Docs", target: "_blank", href: "/" },
-        { link: "Privacy Policy", href: "/" },
-        { link: "Terms of Use", href: "/" },
+        { link: "Privacy Policy", href: "/privacyPolicy" },
+        { link: "Terms of Use", href: "/terms" },
       ],
     },
   ];
